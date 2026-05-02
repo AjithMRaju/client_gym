@@ -54,8 +54,8 @@ const Home = () => {
   return (
     <>
       <AnimatePresence>
-        {loading && <HeroLoading onComplete={() => setLoaded(true)} />}
-        {/* {loading && <HeroLoading progress={progress} />} */}
+        {/* {loading && <HeroLoading onComplete={() => setLoaded(true)} />} */}
+        {loading && <HeroLoading progress={progress} />}
       </AnimatePresence>
 
       {heroData && (
@@ -81,7 +81,7 @@ const Home = () => {
 
           {/* Content Overlay */}
           <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-            <RevealText delay={0.5}>
+            <RevealText delay={1.5}>
               {" "}
               {/* Slightly higher delay to wait for loader exit */}
               <h1 className="max-w-6xl text-2xl font-extrabold uppercase tracking-tighter md:text-7xl">
@@ -89,7 +89,7 @@ const Home = () => {
               </h1>
             </RevealText>
 
-            <RevealText delay={0.65}>
+            <RevealText delay={1.7}>
               <p className="mt-4 max-w-2xl text-lg text-slate-300 md:text-xl">
                 {heroData.subheading}
               </p>
