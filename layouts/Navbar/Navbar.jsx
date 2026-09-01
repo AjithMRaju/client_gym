@@ -80,21 +80,21 @@ const Navbar = () => {
   }, []);
 
   // FOR NAVBAR IN MOBILE DEVICES - fixed dependency array
-  useEffect(() => {
-    const handleScrollMobile = () => {
-      if (footerRef.current) {
-        const footerTop = footerRef.current.getBoundingClientRect().top;
-        const viewportHeight = window.innerHeight;
-        if (footerTop <= viewportHeight) {
-          setIsMobilenav(false);
-        } else {
-          setIsMobilenav(true);
-        }
-      }
-    };
-    window.addEventListener("scroll", handleScrollMobile);
-    return () => window.removeEventListener("scroll", handleScrollMobile);
-  }, []); // Added footerRef to dependency array
+  // useEffect(() => {
+  //   const handleScrollMobile = () => {
+  //     if (footerRef.current) {
+  //       const footerTop = footerRef.current.getBoundingClientRect().top;
+  //       const viewportHeight = window.innerHeight;
+  //       if (footerTop <= viewportHeight) {
+  //         setIsMobilenav(false);
+  //       } else {
+  //         setIsMobilenav(true);
+  //       }
+  //     }
+  //   };
+  //   window.addEventListener("scroll", handleScrollMobile);
+  //   return () => window.removeEventListener("scroll", handleScrollMobile);
+  // }, []); // Added footerRef to dependency array
 
   return (
     <main>
